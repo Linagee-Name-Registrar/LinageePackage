@@ -1,9 +1,9 @@
 # LinageePackage
-
+```
 const web3 = new Web3(Web3.givenProvider)
 
 const lnr = new LNR(web3)
-
+```
 ## Linagee Contract
 
 Get owner of of unwrapped name
