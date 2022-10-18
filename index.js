@@ -186,8 +186,8 @@ const LNR = class {
         });
       }
 
-      tokenOfOwnerByIndex(address) {
-        return this.wrapper_contract.methods.tokenOfOwnerByIndex(index).call((err, result) => {
+      tokenOfOwnerByIndex(address, index) {
+        return this.wrapper_contract.methods.tokenOfOwnerByIndex(address, index).call((err, result) => {
           if(err){
             console.error('Error: ', err);
             return err;
