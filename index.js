@@ -1,4 +1,4 @@
-const LinageeNameRegistrar = class {
+const LNR = class {
     constructor(Provider) {
       this.Provider = Provider;
 
