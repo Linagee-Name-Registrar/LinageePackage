@@ -4,7 +4,7 @@ const web3 = new Web3(Web3.givenProvider)
 
 const lnr = new LNR(web3)
 
-# Wrapper Contract
+## Wrapper Contract
 
 Get owner of wrapped name
 
@@ -33,7 +33,7 @@ lnr.wrap(nameBytes, account).then(function(result){
      }
 })
 
-#Linagee Contract
+## Linagee Contract
 
 Get owner of of unwrapped name
 lnr.owner(nameBytes)
