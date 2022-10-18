@@ -122,7 +122,18 @@ const LNR = class {
       }
 
       setContent(nameBytes, contentBytes, account) {
-        return this.linagee_contract.methods.setContent(nameBytes, conentBytes).send({from: account}).once("error", (err) => {
+        return this.linagee_contract.methods.setContent(nameBytes, contentBytes).send({from: account}).once("error", (err) => {
+            console.log(err);
+          })
+          .then((receipt) => {
+          return receipt;
+        }).catch(function(error){
+          return error;
+        });
+      }
+    
+      transfer(nameBytes, address, account) {
+        return this.linagee_contract.methods.transfer(nameBytes, address).send({from: account, value: 0}).once("error", (err) => {
             console.log(err);
           })
           .then((receipt) => {
