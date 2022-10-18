@@ -173,6 +173,18 @@ const LNR = class {
         }
         });
       }
+    
+      idToName(tokenId) {
+        return this.wrapper_contract.methods.idToName(tokenId).call((err, result) => {
+          if(err){
+            console.error('Error: ', err);
+            return err;
+            // handle the error here
+          } else {
+          return result;
+        }
+        });
+      }
 
       tokenOfOwnerByIndex(address) {
         return this.wrapper_contract.methods.tokenOfOwnerByIndex(index).call((err, result) => {
