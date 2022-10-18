@@ -185,6 +185,18 @@ const LNR = class {
         }
         });
       }
+    
+      nameToId(nameBytes) {
+        return this.wrapper_contract.methods.nameToId(nameBytes).call((err, result) => {
+          if(err){
+            console.error('Error: ', err);
+            return err;
+            // handle the error here
+          } else {
+          return result;
+        }
+        });
+      }
 
       tokenOfOwnerByIndex(address, index) {
         return this.wrapper_contract.methods.tokenOfOwnerByIndex(address, index).call((err, result) => {
